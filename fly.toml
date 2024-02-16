@@ -1,0 +1,15 @@
+# fly.toml app configuration file generated for mjolnir on 2024-03-23T17:57:10Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'mjolnir'
+primary_region = 'lhr'
+
+kill_signal = "SIGINT"
+kill_timeout = 5
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
