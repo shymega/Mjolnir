@@ -1,0 +1,16 @@
+---
+name: CI tests (meta)
+
+on:
+  push:
+    paths: ["src/", "Cargo.toml", "Cargo.lock", "rust-toolchain", "*.nix"]
+  workflow_dispatch:
+
+jobs:
+  test-linux:
+    uses: ./.github/workflows/ci-tests-linux.yml
+    secrets: inherit
+
+  test-nix:
+    uses: ./.github/workflows/ci-tests-nix.yml
+    secrets: inherit

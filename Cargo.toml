@@ -1,0 +1,21 @@
+[package]
+name = "mjolnir"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.76.0"
+
+[dependencies]
+anyhow = "1.0.81"
+env_logger = "0.11.3"
+futures = "0.3.30"
+irc = "1.0.0"
+log = "0.4.21"
+matrix-sdk = "0.7.1"
+ollama-rs = "0.1.7"
+serenity = "0.12.1"
+sqlx = { version = "0.7", features = [ "runtime-tokio", "tls-rustls" ] }
+thiserror = "1.0.58"
+tokio = { version = "1.36.0", features = ["full"] }
+
+[target.x86_64-unknown-linux-musl.dependencies]
+openssl = { version = "0.10.64", features = ["vendored"] }
