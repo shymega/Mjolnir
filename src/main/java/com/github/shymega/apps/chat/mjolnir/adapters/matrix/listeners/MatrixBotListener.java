@@ -10,7 +10,7 @@ public interface MatrixBotListener<T extends ClientEvent> {
     Class<T> getMatrixEventType();
     Mono<Void> execute(T event);
 
-    default Mono<Void> handleError(Throwable err) {
+    default Mono<Void> handleError(final Throwable err) {
         log.error("Unable to process event.");
         log.error("Event: " + getMatrixEventType().getSimpleName() + ": " + err.getMessage());
         return Mono.empty();

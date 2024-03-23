@@ -7,7 +7,7 @@ import java.time.OffsetDateTime;
 
 public class BaseEvent extends ApplicationEvent {
     protected final OffsetDateTime CREATED_TIMESTAMP = OffsetDateTime.now();
-    public BaseEvent(Object source) {
+    public BaseEvent(final Object source) {
         super(source);
     }
 }

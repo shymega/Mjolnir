@@ -4,10 +4,10 @@ import com.cosium.matrix_communication_client.MatrixResources;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class MatrixBotConfiguration
+public final class MatrixBotConfiguration
 {
     public void startMatrixBot() {
-        MatrixResources matrix = MatrixResources.factory()
+        final MatrixResources matrix = MatrixResources.factory()
                 .builder()
                 .https()
                 .hostname("one.ems.host")

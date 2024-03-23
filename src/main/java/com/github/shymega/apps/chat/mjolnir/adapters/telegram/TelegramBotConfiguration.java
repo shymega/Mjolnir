@@ -7,12 +7,12 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 @Configuration
-public class TelegramBotConfiguration {
+public final class TelegramBotConfiguration {
     public void startTelegramBot() throws TelegramApiException {
         try {
-            TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
+            final TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
             botsApi.registerBot(new TelegramBotEventListener());
-        } catch (TelegramApiException e) {
+        } catch (final TelegramApiException e) {
             // Handle gracefully.
             e.printStackTrace();
         }

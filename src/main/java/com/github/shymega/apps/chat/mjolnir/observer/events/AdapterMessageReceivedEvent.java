@@ -4,7 +4,7 @@ import com.github.shymega.apps.chat.mjolnir.adapters.IncomingMessage;
 
 public class AdapterMessageReceivedEvent<T extends IncomingMessage> extends BaseEvent {
     protected T payload;
-    public AdapterMessageReceivedEvent(Object source) {
+    public AdapterMessageReceivedEvent(final Object source) {
         super(source);
     }
 }
